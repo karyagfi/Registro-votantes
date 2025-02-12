@@ -79,10 +79,7 @@ const RegistroVotantes = () => {
               type="text" 
               name="nombre" 
               value={votante.nombre} 
-              onChange={(e) => setVotante({ 
-                ...votante, 
-                nombre: e.target.value 
-              })} 
+              onChange={handleChange} 
             />
           </div>
           <div>
@@ -92,10 +89,7 @@ const RegistroVotantes = () => {
               type="text" 
               name="telefono" 
               value={votante.telefono} 
-              onChange={(e) => setVotante({ 
-                ...votante, 
-                telefono: e.target.value
-              })} 
+              onChange={handleChange} 
             />
           </div>
           <div>
@@ -105,10 +99,7 @@ const RegistroVotantes = () => {
               type="text" 
               name="direccion" 
               value={votante.direccion} 
-              onChange={(e) => setVotante({ 
-                ...votante, 
-                direccion: e.target.value 
-              })} 
+              onChange={handleChange} 
             />
           </div>
           <div>
@@ -118,10 +109,7 @@ const RegistroVotantes = () => {
               type="text" 
               name="curp" 
               value={votante.curp} 
-              onChange={(e) => setVotante({ 
-                ...votante, 
-                curp: e.target.value 
-              })} 
+              onChange={handleChange} 
             />
           </div>
           <div>
@@ -131,10 +119,7 @@ const RegistroVotantes = () => {
               type="text" 
               name="alcaldia" 
               value={votante.alcaldia} 
-              onChange={(e) => setVotante({ 
-                ...votante, 
-                alcaldia: e.target.value 
-              })} 
+              onChange={handleChange} 
             />
         </div>
         <button 
