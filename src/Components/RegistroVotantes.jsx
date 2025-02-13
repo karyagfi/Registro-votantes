@@ -37,12 +37,22 @@ const RegistroVotantes = () => {
   };
   
   const inputStyle = {
-    width: "100%",
-    padding: "8px",
+    width: "60%",
+    padding: "1em",
     marginBottom: "15px",
     border: "1px solid #ccc",
-    borderRadius: "5px",
+    borderRadius: "1em",
     fontSize: "16px"
+  };
+
+  const TextStyle = {
+    width: "50%",
+    padding: "1em",
+    marginBottom: "20px",
+    border: "1px solid #ccc",
+    borderRadius: "1em",
+    fontSize: "16px",
+    height: "100px"
   };
   
   const buttonStyle = {
@@ -59,7 +69,7 @@ const RegistroVotantes = () => {
   };
   
   const divStyle = {
-    maxWidth: "400px",
+    maxWidth: "500px",
     margin: "0 auto",
     padding: "20px",
     border: "1px solid #ddd",
@@ -94,8 +104,8 @@ const RegistroVotantes = () => {
           </div>
           <div>
             <label style={labelStyle}>Dirección</label>
-            <input 
-              style={inputStyle}
+            <textarea 
+              style={TextStyle}
               type="text" 
               name="direccion" 
               value={votante.direccion} 
@@ -114,13 +124,20 @@ const RegistroVotantes = () => {
           </div>
           <div>
             <label style={labelStyle}>Alcaldía</label>
-            <input 
+            <select
               style={inputStyle}
               type="text" 
               name="alcaldia" 
               value={votante.alcaldia} 
               onChange={handleChange} 
-            />
+            >
+              <option value="">Selecciona una alcaldía</option>
+              <option value="Azcapotzalco">Azcapotzalco</option>
+              <option value="Benito Juárez">Benito Juárez</option>
+              <option value="Coyoacán">Coyoacán</option>
+              <option value="Cuajimalpa">Cuajimalpa</option>
+              <option value="Gustavo A. Madero">Gustavo A. Madero</option>
+            </select>
         </div>
         <button 
           style={buttonStyle}
